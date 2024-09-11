@@ -8,6 +8,8 @@ public class LoadGame : MonoBehaviour
 {
     //remover os métodos default
 	public void CarregarFase1(){
+
+
 		//método inicia uma nova cena
 		SceneManager.LoadScene ("Fase1");
 	}
@@ -15,4 +17,16 @@ public class LoadGame : MonoBehaviour
 	{
 		Application.Quit();
 	}
+	
+	public void CarregarMenu()
+	{
+		SceneManager.LoadScene("Menu");
+	}
+	
+	public void CarregarFase2(){
+
+
+		//método inicia uma nova cena
+		SceneManager.LoadScene ("Fase2");
+	} 
 }

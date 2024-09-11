@@ -13,19 +13,20 @@ public class Cronometro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tempoAtual = 0;
+        tempoAtual = 5.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
 		//deltaTime --> Tempo de renderização entre dois frames
-		tempoAtual += Time.deltaTime;
+		tempoAtual -= Time.deltaTime;
 		//formata o tempoAtual(float) para texto utilizando duas casas decimais (F2)
-		CronometroText.text = tempoAtual.ToString("F2");   
-		if (tempoAtual>5.0)
+		
+		if (tempoAtual<=0.0)
 		{
 			SceneManager.LoadScene ("Menu");
 		}
+		CronometroText.text = tempoAtual.ToString("F2");   
     }
 }
